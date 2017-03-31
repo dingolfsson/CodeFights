@@ -1,4 +1,4 @@
-arrayChange(inputArray) {
+arrayChange = inputArray => {
     'use strict'
     let count = 0;
 

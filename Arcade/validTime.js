@@ -1,4 +1,5 @@
-function validTime(time) {
-    var x = time.split`:`;
-    return x[0] < 24 && x[1] < 60;
+validTime = time => {
+    'use strict'
+    time = time.split`:`;
+    return time[0] < 24 && time[1] < 60;
 }

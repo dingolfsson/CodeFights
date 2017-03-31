@@ -1,4 +1,2 @@
-function findEmailDomain(address) {
-    var domain = address.split("@");
-    return domain[domain.length-1];
-}
+findEmailDomain = address =>
+    address.substring(address.lastIndexOf('@')+1)

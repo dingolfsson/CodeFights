@@ -1,10 +1,4 @@
-function areEquallyStrong(yourLeft, yourRight, friendsLeft, friendsRight) {
-    var uArr = [yourLeft, yourRight],
-        fArr = [friendsLeft, friendsRight],
-        uMax = Math.max( ...uArr),
-        uMin = Math.min( ...uArr),
-        fMax = Math.max( ...fArr),
-        fMin = Math.min( ...fArr);
-
-    return (uMax == fMax && uMin == fMin);
-}
+areEquallyStrong = (uL, uR, fL, fR) =>
+    (Math.max(uL, uR) === Math.max(fL, fR)
+     &&
+     Math.min(uL, uR) == Math.min(fL, fR));

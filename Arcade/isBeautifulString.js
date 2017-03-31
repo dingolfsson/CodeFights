@@ -1,7 +1,8 @@
-function isBeautifulString(inputString) {
+isBeautifulString = (inputString) => {
+    'use strict'
     if (!inputString.includes("a")) return false;
 
-    var char = "a",
+    let char = "a",
         reg = new RegExp(char, "g"),
         current = (inputString.match(reg)).length,
         next = 0;
@@ -13,7 +14,5 @@ function isBeautifulString(inputString) {
         current = (inputString.match(reg) || []).length;
         if (next < current) return false;
     }
-
     return true;
-
 }

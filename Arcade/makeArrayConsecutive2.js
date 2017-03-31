@@ -1,3 +1,2 @@
-function makeArrayConsecutive2(a) {
-    return Math.abs(a.length - (Math.max(...a) - Math.min(...a)) -1);
-}
+'use strict'
+makeArrayConsecutive2 = (a) => Math.max(...a) - Math.min(...a) - a.length + 1

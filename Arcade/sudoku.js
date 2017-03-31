@@ -1,15 +1,16 @@
-function sudoku(grid) {
+sudoku = grid => {
+    'use strict'
     // If any horizantal has duplicates
-    var unique;
-    for ( i = 0; i < grid.length; i++) {
+    let unique;
+    for (let i = 0; i < grid.length; i++) {
         unique = [...new Set(grid[i])];
         if (unique.length != 9) return false;
     }
 
     // Check vertial
     var unique2 = [];
-    for ( i = 0; i < grid.length; i++) {
-        for ( j = 0; j < grid.length; j++) {
+    for (let i = 0; i < grid.length; i++) {
+        for (let j = 0; j < grid.length; j++) {
             unique2.push(grid[j][i]);
         }
 
@@ -19,12 +20,10 @@ function sudoku(grid) {
     }
 
     // Check 3x3
-    var duplicate = grid;
-
-    var count = 1;
-    for (i = 0; i < 9; i++) {
-
-        for (j = 0; j < 9; j++) {
+    let duplicate = grid,
+        count = 1;
+    while (duplicate.length) {
+        for (let j = 0; j < 9; j++) {
             unique2.push(...duplicate[j].splice(0,3));
             if (j % 3 == 2) {
                 count++;
@@ -32,11 +31,7 @@ function sudoku(grid) {
                 if (unique.length != 9) return false;
                 unique2 = [];
             }
-            if (count == 9)
-                return true;
+            if (count == 9) return true;
         }
     }
-
-    //return true;
-
 }

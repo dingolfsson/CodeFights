@@ -1,11 +1,10 @@
-function isIPv4Address(inputString) {
-    var a = inputString.split('.');
-    if (a.length !== 4) return false;
+isIPv4Address = inputString => {
+    'use strict'
+    let a = inputString.split('.');
 
-    for (i in a) {
-        if (isNaN(a[i])) return false;
-        var x = parseInt(a[i]);
+    for (let i in a) {
+        let x = a[+i];
         if (255 < x || x === '' || isNaN(x)) return false;
     }
-    return true;
+    return a.length === 4;
 }

@@ -1,12 +1,11 @@
-// dingolfsson
-function chessKnight(cell) {
+chessKnight = cell => {
+    'use strict'
     // Buffer splits chars to arrray and to decimal value
     // "a1" => [97, 49]
-    var b = new Buffer(cell);
-
+    let b = new Buffer(cell);
     // x: 97 ('a') now becomes 1 (from 1-8)
     // y: 49 ('1') now becomes 1 (from 1-8)
-    var x = b[0] - 96,
+    let x = b[0] - 96,
         y = b[1] - 48;
 
     // Instead of working with 8 x 8 options,
@@ -15,9 +14,8 @@ function chessKnight(cell) {
     y = (y > 4 ? y - (y % 5 * 2 + 1) : y);
 
     if (x * y > 8) return 8;
-    if (x * y > 5) return 6;
-    if (x * y > 2) return 4;
-    if (x * y == 2) return 3;
-
-    return 2;
+    else if (x * y > 5) return 6;
+    else if (x * y > 2) return 4;
+    else if (x * y == 2) return 3;
+    else return 2;
 }

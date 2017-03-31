@@ -1,12 +1,16 @@
-function absoluteValuesSumMinimization(a) {
+// Simplified
+// absoluteValuesSumMinimization = a => a[Math.ceil(a.length/2)-1]
+
+absoluteValuesSumMinimization = a => {
+    'use strict'
     if (a.length < 3) return Math.min(...a);
 
-    var x = Infinity;
-    var rtn;
-    for (i in a) {
+    let x = Infinity;
+    let rtn;
+    for (let i in a) {
         var sum = 0;
 
-        for (j in a) {
+        for (let j in a) {
             sum += Math.abs(a[i] - a[j]);
         }
         if (sum < x) {

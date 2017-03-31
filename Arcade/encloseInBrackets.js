@@ -1,0 +1,1 @@
+encloseInBrackets = inputString => '(' + inputString + ')'

@@ -1,3 +1,1 @@
-function isDigit(symbol) {
-    return !isNaN(symbol);
-}
+isDigit = symbol => !isNaN(symbol)

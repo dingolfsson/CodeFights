@@ -1,3 +1,1 @@
-function circleOfNumbers(n, firstNumber) {
-    return ((firstNumber+n/2) % n);
-}
+circleOfNumbers = (n, firstNumber) => ((firstNumber+n/2) % n)

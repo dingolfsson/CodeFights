@@ -1,3 +1,1 @@
-function differentSymbolsNaive(s) {
-  return new Set(s).size
-}
+differentSymbolsNaive = (s) => new Set(s).size

@@ -1,15 +1,16 @@
-function digitDegree(n) {
-    var a = n.toString(10).split('').map(Number);
-    var sum = 0,
+digitDegree = n => {
+    'use strict'
+    let a = n.toString(10).split``.map(Number);
+    let sum = 0,
         count = 0;
 
     while (a.length != 1) {
         count++;
         sum = 0;
-        for (i in a) {
+        for (let i in a) {
             sum+=a[i];
         }
-        a = sum.toString(10).split('').map(Number);
+        a = sum.toString(10).split``.map(Number);
     }
     return count;
 }

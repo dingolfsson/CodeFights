@@ -1,16 +1,15 @@
-function palindromeRearranging(inputString) {
-    var iS = inputString.split("").sort();
+palindromeRearranging = inputString => {
+    'use strict'
+    let a = inputString.split("").sort(),
+        e = 0;
 
-    var error = 0;
-
-    while (iS.length) {
-        var del = iS.shift();
-        if (iS[0] == del) {
-            iS.shift();
+    while (a.length) {
+        let del = a.shift();
+        if (a[0] === del) {
+            a.shift();
         } else {
-            error++;
+            e++;
         }
     }
-
-    return error < 2;
+    return e < 2;
 }

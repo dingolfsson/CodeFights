@@ -1,0 +1,1 @@
+candies = (n, m) => n * Math.floor(m/n)

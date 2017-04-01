@@ -1,1 +1,1 @@
-largestNumber = (n) => +'9'.repeat(n)
+largestNumber = n => +'9'.repeat(n)

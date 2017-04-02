@@ -1,0 +1,1 @@
+htmlEndTagByStartTag = s => `</${s.match(/\w+/)[0]}>`

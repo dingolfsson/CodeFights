@@ -1,0 +1,1 @@
+removeArrayPart = (a, l, r) => a.filter((v, i) => i < l || i > r)

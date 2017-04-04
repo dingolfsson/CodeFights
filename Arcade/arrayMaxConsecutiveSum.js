@@ -1,5 +1,5 @@
 arrayMaxConsecutiveSum = (inputArray, k) => {
-    'use strict'
+'use strict'
     let max = 0,
         arrSum;
 

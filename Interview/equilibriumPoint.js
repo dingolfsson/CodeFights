@@ -1,14 +1,12 @@
-sum1 = sum2 = 0
+s0 = s1 = 0
 equilibriumPoint = a => {
     'use strict'
+    s1 = a.reduce((x,y) => x+y)
     if (a.length === 1) return 1;
     for (let i in a) {
-        sum2 += a[i]
-    }
-    for (let i in a) {
-        sum1 += a[i]
-        if (sum1 === sum2) return +i+1
-        sum2 -= a[i]
+        s0 += a[i]
+        if (s0 === s1) return +i+1
+        s1 -= a[i]
     }
     return -1
 }

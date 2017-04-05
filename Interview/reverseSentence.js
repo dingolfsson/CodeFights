@@ -1,1 +1,1 @@
-reverseSentence = sentence => sentence.split` `.reverse``.join` `
+reverseSentence = s => s.split` `.reverse``.join` `

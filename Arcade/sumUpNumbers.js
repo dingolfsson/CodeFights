@@ -1,7 +1,6 @@
 r = /(\d)+/g
-sumUpNumbers = inputString => {
-    'use strict'
-    if (!r.test(inputString)) return 0
-    let x = inputString.match(r).map(Number)
-    return x.reduce((prev, curr) => prev + curr)
-}
+sumUpNumbers = s =>
+    (!r.test(s) ? 0 : s.match(r)
+    .map(Number)
+    .reduce((p, c) => p + c))
+                     
